@@ -1,0 +1,407 @@
+body {
+  	position:relative;
+	margin: 0;
+	padding: 0px;
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 15px;
+	color:#404040;
+  	font-weight:100;
+  	background: url('http://storage.o-0.cz/gui/mus/img/pozadi.jpg') center center no-repeat fixed;
+  	background-size: cover;
+	line-height:25px;
+
+}
+
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+  	font-weight:100;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	list-style: none;
+	vertical-align: baseline;
+	background: transparent;
+  	position:relative;
+}
+
+a {
+	color: #127bac;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #127bac;
+	text-decoration: underline;
+}
+
+
+#hlavicka {
+	width: 100%;
+	height: 900px;
+	
+}
+	.sipka_dolu {
+		position: absolute;
+		width: 38px;
+		height: 38px;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -19px;
+		background: url('http://storage.o-0.cz/gui/mus/img/sipka.png') center bottom no-repeat;
+		cursor: pointer;
+	}
+	#csen {
+		position: fixed;
+		top: 11px;
+		right: 10px;
+		color: #ffffff;
+		z-index: 120;
+		
+	}
+
+	#hlavicka #menu_fixed {
+		position: absolute;
+		width: 100%;
+		height: 150px;
+		background: rgba(18,123,172,0);
+		top: 40%;
+		z-index: 100;
+		transition: height 1s, background 0.25s;
+	}
+
+	#hlavicka #menu_fixed.fixed {
+		position: fixed;
+		top: 0%;
+	}
+
+		 #menu_fixed #logo {
+		 	position: absolute;
+		 	width: 700px;
+		 	left: 50%;
+		 	margin-left: -356px;
+		 	font-size: 33px; 
+		 	text-align: center;
+		 	color: #ffffff;
+		 	line-height: 50px;
+		 	transition: margin 1s, top 1s;
+		 }
+
+		#logo span{
+			display: inline-block;
+			padding-right: 10px;
+			width: 160px;
+			text-align: left;
+			transition: width 1s, padding 1s, opacity 1s;
+		 }
+
+		 #logo span:nth-child(2) {
+		 	width: 124px;
+		 }
+
+		
+
+
+	#menu_fixed #claim {
+		position: absolute;
+		text-align: center;
+		color: #ffffff;
+		width: 500px;
+		left: 50%;
+		top: 50px;
+		margin-left: -250px;
+		padding-top: 5px;
+		border-top: 1px solid #ffffff;
+		transition: opacity 1s;
+	}
+
+	#hlavicka ul#menu {
+		position: absolute;
+		top: 120px;
+		width: 500px;
+		left: 50%;
+	 	margin-left: -250px;
+		transition: margin 1s, top 1s;
+		text-align: center;
+	}
+
+	#hlavicka ul#menu a {
+		display: inline-block;
+		padding: 0px 10px;
+		color: #ffffff;
+	}
+
+
+
+	#hlavicka #menu_fixed.small {
+		height: 50px;
+		background: rgba(18,123,172,1);
+		
+	}
+
+
+		#menu_fixed.small #logo span{
+			width: 0px;
+			opacity: 0;
+			padding-right: 0px;
+
+		}
+
+		#menu_fixed.small #logo{
+			margin-left: -590px;
+		
+		}
+
+		#menu_fixed.small #menu{
+			top:11px;
+			margin-left: -190px;
+			
+		}
+
+		#menu_fixed.small #claim{
+			opacity:0;
+			
+		}
+
+#content {
+	width: 100%;
+	background: #fbfbfa;
+	/*min-height:1100px;*/
+	position: relative;	
+}
+
+
+	h1 {
+		display: block;
+		width: 400px;
+		padding: 100px 50px 40px 50px;
+		margin: auto;
+		font-size: 40px;
+		line-height: 50px;
+		border-top: 1px solid #404040;
+	}
+
+		h1 span {
+			position: absolute;
+			display: block;
+			width: 400px;
+			height: 20px;
+			font-size: 13px;
+			top: 70px;
+			left: 50px;
+			line-height: 13px;
+		}
+			h1 span a {
+				color: #404040;
+			}
+
+			h1 span a:hover {
+				color: #127bac;
+				text-decoration: underline;;
+			}
+
+	h2 {
+		display: block;
+		width: 400px;
+		padding: 0px 10px 20px 10px;
+		margin: auto;
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	h3 {
+		font-size: 18px;
+		line-height: 20px;
+		width: 400px;
+		margin: auto;
+		padding: 0px 0px 20px 0px;
+	}
+
+
+	div.submenu {
+		display: block;
+		width: 400px;
+		padding: 10px 10px 40px 10px;
+		margin: auto;
+		border-top: 1px solid #404040;
+	}
+
+	div.submenu a {
+		padding-right: 20px;
+	}
+
+	p {
+		width: 400px;
+		margin: auto;
+		padding-bottom: 50px;
+	}
+
+
+
+	.houston {
+		width: 500px;
+		padding: 50px;
+		background: #906090;
+		color: #ffffff;
+		margin: auto;
+		font-size: 40px;
+		line-height: 50px;
+		margin-bottom: 20px;
+	}
+
+	#paticka {
+		width: 100%;
+		height: 1500px;
+		background: #404040;
+	}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------- */
+/* --------------------- historie --------------------- */
+/* ---------------------------------------------------- */
+
+
+
+#historie {
+	color: #ffffff;
+	background: #8d8169 url('a.png') center center fixed;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+	#historierozbalitvse {
+		cursor: pointer;
+	}
+
+	h1 {
+		border-color: #ffffff;
+	}
+
+	h2 {
+		border-top: rgba(255,255,255,0.7) 1px solid;
+		margin-top: 30px;
+		padding: 00px 50px 0px 50px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	h3 {
+		color: #ffffff;
+	}
+
+	#historie svg {
+		position:absolute; 
+		top:0px; 
+		left:0px;
+		width:100%;
+		height: 100%
+	}
+
+.pribehblok {
+	position: relative;
+	width: auto;
+	margin-right: 450px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	margin-left: 50px;
+	transition: 1s;
+}
+
+.pribehbox {
+			max-height: 95px;
+			width: 400px;
+			padding: 20px;
+        	position: relative;
+			top: 0px;
+			margin-left: -20px;
+			background: rgba(141,129,105,0.7);
+			transition: 1s;
+			cursor: pointer;
+}
+
+	.pribehbox .obrazek {
+		position: absolute;
+		left: -45px;
+		top: 5px;
+		border-radius: 90px;
+		width: 50px;
+		height: 50px;
+		background: #8d8169;
+		box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.2);
+		transition: 1s;
+	}
+
+	.pribehbox .obrazek.big {
+		left: -70px;
+		top: -5px;
+		width: 70px;
+		height: 70px;
+	}
+
+		.pribehbox h3 {
+			width: 100%;
+			transition: 1s;
+		}
+
+		.pribehbox p {
+			max-height: 0px;
+			width: 100%;
+			overflow: hidden;
+			padding-bottom: 0px;
+			transition: 1s;
+		}
+
+		.pribehbox p:nth-of-type(1) {
+			max-height: 50px;
+		}
+
+	.pribehblok.detaily {
+		margin-right: 10px;
+	}
+
+	.pribehblok.detaily .pribehbox {
+		width:500px;
+		left: 50% !important;
+		padding: 20px 0px 0px 0px;
+		margin-left: -270px;
+		background: #ffffff;
+		max-height:1999px;
+		transition: 1s;
+	}
+
+
+		.pribehblok.detaily .pribehbox h3 {
+			width: 400px;
+			color:#404040;
+			transition: 1s;
+		}
+
+		.pribehblok.detaily .pribehbox p {
+			max-height: 1999px;
+			overflow: visible;
+			width: 400px;
+			padding-bottom: 50px;
+			color:#404040;
+			transition: 1s;
+		}
+
+
+
+@media (max-width: 320px){
+	#historie svg {
+	display: none;
+	}
+        .pribehbox {
+        	right: none;
+        	left: 10px !important;
+        }
+}
