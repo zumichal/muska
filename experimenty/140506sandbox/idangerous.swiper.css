@@ -120,7 +120,12 @@ Pagination Styles
 
 
 /* Specify Swiper's Size: */
-.swiper-container-index, .swiper-slide-index {
-  width: 500px;
-  height: 200px;
+.swiper-container {
+  width: 100%;
+  height: 700px;
+}
+
+.swiper-slide {
+  width: 800px;
+  height: 700px;
 }
