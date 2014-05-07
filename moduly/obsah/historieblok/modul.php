@@ -1,9 +1,9 @@
 <?php
-class modul_pripinak extends Modul
+class modul_historieblok extends Modul
 {
 	public function popis()
     {
-        return array("pripinak", "");
+        return array("historieblok", "");
     }
 
     public $poleMist = array(0);

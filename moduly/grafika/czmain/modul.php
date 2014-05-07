@@ -11,11 +11,13 @@ class modul_czmain extends Modul
     public $jmenaMist = array("menu","sandboxplace","hlavickadodatky");
 
     public $vychProm = array(
-        'typstranky' => "normalni"
+        'typstranky' => "normalni",
+        'hlavickadodatky' => " "
     );
 
     public $popisProm = array(
-        'typstranky' => "typ stranky (uvodni/normalni)"
+        'typstranky' => "typ stranky (uvodni/normalni)",
+        'hlavickadodatky' => "veci ktere by meli byt v hlavicce"
         );
 
 
@@ -54,14 +56,14 @@ class modul_czmain extends Modul
      <link href='http://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 		*loc2*
 
-
+".$prom['hlavickadodatky']."
 </head>
 <body>
 
 
 
 <div id='hlavicka'>
-    <div id='csen'>cs/en/fr/ru</div>
+    <div id='csen'>cs/en/fr/de</div>
     <div id='menu_fixed' class='".$menutrida."'>
         
         <div id='logo'>M<span>OSTECKÁ </span>U<span>HELNÁ </span>S<span>POLEČNOST</span></div>
@@ -79,9 +81,45 @@ class modul_czmain extends Modul
     *loc1*
 
 
+<div id='paticka'>
 
+</div>
 </body>
 </html>"	;
+
+$vyhazovac = "<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <link type='text/css' rel='stylesheet' media='all' href='http://storage.o-0.cz/gui/mus/css/style.css' />
+    <title>Mostecká uhelná společnost</title>
+</head>
+<body style>
+
+<div style='width:100%;height:1500px;background:url(\"http://storage.o-0.cz/gui/mus/img/greentekvyhazovac.jpg\") center center fixed; background-size:cover;'></div>
+
+</body>
+</html>";
+
+
+
+if(isset($_SESSION['idUziv']) && !empty($_SESSION['idUziv']))
+        {
+          // return $html;
+        }
+
+        //nabidnout prihlaseni
+        else
+        {
+            //login
+            
+
+
+            // return $vyhazovac;
+        }
+
+
+
 		return $html;
 	}
 
