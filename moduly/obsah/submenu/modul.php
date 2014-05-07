@@ -33,8 +33,17 @@ class modul_submenu extends Modul
 
 	public function main($prom, $id, &$poleCSS, &$poleJS)
 	{
+
+        $aktStranka = FW::StrankaSPrvkem($id);
+
+        $submenu = "";
+        $pole2D = FW::Podstranky($aktStranka );
+        foreach($pole2D as $id => $detaily)
+        {
+            $submenu .= '<a href="/'.$detaily['url'].'"">'.$detaily['uzivJmenoStr'].'</a>';
+        }
     
-		$html = "<div class='submenu' data-maindiv >".$prom['text']."</div>"	;
+		$html = "<div class='submenu' data-maindiv >".$submenu."</div>"	;
 		return $html;
 	}
 

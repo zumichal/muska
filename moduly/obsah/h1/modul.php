@@ -32,8 +32,15 @@ class modul_h1 extends Modul
 
 	public function main($prom, $id, &$poleCSS, &$poleJS)
 	{
+        $output .= '<a href="http://'.FW::AktualHost().'">domů</a>';
+        $aktStranka = FW::StrankaSPrvkem($id);
+        $poleUrl = FW::PoleUrl($aktStranka);
+        foreach ($poleUrl as $castUrl => $url)
+        {
+            $output .= ' > '.'<a href="'.$url.'">'.$castUrl."</a>";
+        }
     
-		$html = "<h1  data-maindiv  ><span>*loc0*</span>".$prom['text']."</h1>"	;
+		$html = "<h1  data-maindiv  ><span>".$output."</span>".$prom['text']."</h1>"	;
 		return $html;
 	}
 
